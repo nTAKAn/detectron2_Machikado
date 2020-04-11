@@ -1,4 +1,12 @@
-# detectron2 for まちカドまぞく
+# detectron2 for まちカドまぞく  
+
+---
+！！！データセットのアノテーションが中途半端なんで仮の状態です！！！
+
+ですが、30枚程度の訓練画像にしては、結構テストの結果が良いです。
+後50枚程度アノテーションが残っていますので、もう少し結果は良くなりそうです。
+期待大ですね・・・
+---
 
 <img src=https://user-images.githubusercontent.com/33882378/79041969-d4473e00-7c2e-11ea-9072-b24d55bb4762.jpg>
 
@@ -26,7 +34,7 @@ cfg.MODEL.WEIGHTS = './coco_models/model_final_2d9806.pkl'
 ```
 の部分を
 ```
-'./coco_models/model_final_2d9806.pkl'
+cfg.MODEL.WEIGHTS = './coco_models/model_final_2d9806.pkl'
 ```
 
 へ書き換えて貰えばOKです。
