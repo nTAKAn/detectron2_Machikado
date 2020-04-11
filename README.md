@@ -1,4 +1,4 @@
-# detectron2 for まちカドまぞく  
+# detectron2 for まちカドまぞく
 
 ## ＜現在テスト継続中です＞
 
@@ -19,9 +19,31 @@ AI学習モチベーション維持のために、まちカドまぞくが好き
 ## 1.使い方
 
 ### (1) 当然ですが、detectron2 は動く状態にしてください。
+本家 https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md の通りで動くようになるはずですが、私も初め動きませんでしたのでポイントを・・・
 
-### (2) detectron2 ディレクトリの下に clone してください。
-別に変えてもいいけど、その場合ディレクトリ関係のパスは修正してください。
+> Requirements
+>
+>    * Linux or macOS with Python ≥ 3.6
+>    * PyTorch ≥ 1.3
+>    * torchvision that matches the PyTorch installation. You can install them together at pytorch.org to make sure of this.
+>    * OpenCV, optional, needed by demo and visualization pycocotools: pip install cython; pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
+
+以上の要件が確実に満たされているかを確認してください。
+
+で、
+
+> Build Detectron2 from Source
+> 
+> ```
+> # Or, to install it from a local clone:
+> git clone https://github.com/facebookresearch/detectron2.git
+> cd detectron2 && python -m pip install -e .
+> ```
+
+の手順でセットアップできました。
+
+### (2) Machikado は detectron2 ディレクトリの下に clone してください。
+detectron2 を git clone して出来た detectron2 ディレクトリの直下で clone してください。別に変えてもいいけど、その場合ディレクトリ関係のパスは修正してください。
 
 ### (3) weight ファイルをダウンロードします。
 
@@ -33,7 +55,7 @@ https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md から�
  
 <img src=https://user-images.githubusercontent.com/33882378/79042089-c2b26600-7c2f-11ea-9630-69cef399b497.jpg>
 
-### (4) ダウンロードしたファイルを coco_models の下にコピーしてください。
+### (4) ダウンロードしたファイルを Machikado/coco_models にコピーしてください。
 
 ですが、ファイル名が確実に違うので・・・例えば、ダウンロードされたファイル名が model_final_xxxxxx.pkl だとしたら、ノート中盤の・・・
 
