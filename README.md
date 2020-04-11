@@ -45,7 +45,7 @@ AI学習モチベーション維持のために、まちカドまぞくが好き
 
 の手順でセットアップできました。
 
-### (2) Machikado は detectron2 ディレクトリの下に clone してください。
+### (2) detectron2_Machikado は detectron2 ディレクトリの下に clone してください。
 detectron2 を git clone して出来た detectron2 ディレクトリの直下で clone してください。別に変えてもいいけど、その場合ディレクトリ関係のパスは修正してください。
 
 ### (3) weight ファイルをダウンロードします。
