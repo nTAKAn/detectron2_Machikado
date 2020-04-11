@@ -8,13 +8,16 @@
 
 ---
 
+（この画像は訓練データの推論結果ですが、最終的にはこんな感じにしたい）
 <img src=https://user-images.githubusercontent.com/33882378/79041969-d4473e00-7c2e-11ea-9072-b24d55bb4762.jpg>
 
-AI学習モチベーション維持のために、まちカドまぞくが好きすぎるので detectron2 用のデータセットを作って試してみました。
+AI学習モチベーション維持のために、まちカドまぞくが好きすぎるので detectron2 用のデータセットを　VoTT で作って試してみました。
 
 > 製作に当たっては
 > https://demura.net/deeplearning/16807.html
 > を参考にさせていただいています。（感謝です！！）
+
+> データセットは 100% ネタですが、detectron2 を自作のデータセットで試したい方の参考になれば何よりです。
 
 ## 1.使い方
 
@@ -68,3 +71,11 @@ cfg.MODEL.WEIGHTS = './coco_models/model_final_xxxxxx.pkl'
 ```
 
 へ書き換えて貰えばOKです。
+
+## 2. 学習
+
+Machikado_training.ipynb を実行すればOK！
+
+## 3. 推論
+
+Machikado_evaluate.ipynb を実行すればOK！
