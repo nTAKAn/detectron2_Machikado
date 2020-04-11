@@ -1,4 +1,3 @@
 .ipynb_checkpoints/
 __pycache__/
-top1.jpg
-top2.jpg
+*.jpg
