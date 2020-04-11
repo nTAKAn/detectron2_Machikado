@@ -12,17 +12,13 @@ AI学習モチベーション維持のために、まちカドまぞくが好き
 
 COCO Object Detection Baselines ってとこの X101-FPN の model
 
-https://user-images.githubusercontent.com/33882378/79042089-c2b26600-7c2f-11ea-9630-69cef399b497.jpg
-
 画像で言うとこれです。
 
-<img src=https://dl.fbaipublicfiles.com/detectron2/COCO-Detection/faster_rcnn_X_101_32x8d_FPN_3x/139173657/model_final_2d9806.pkl>
+<img src=https://user-images.githubusercontent.com/33882378/79042089-c2b26600-7c2f-11ea-9630-69cef399b497.jpg>
 
-* で coco_models の下にコピーしてくださいですが、ファイル名が確実に違うので・・・
+* で coco_models の下にコピーしてください。
 
-
-例えば、ダウンロードされたファイル名が model_final_2d9806.pkl だとしたら、
-
+ですが、ファイル名が確実に違うので・・・例えば、ダウンロードされたファイル名が model_final_2d9806.pkl だとしたら、</br>
 ノート中盤の
 
 ```
