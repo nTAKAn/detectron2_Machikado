@@ -74,9 +74,8 @@ cfg.MODEL.WEIGHTS = './coco_models/model_final_xxxxxx.pkl'
 
 ### (5) machikado データセットをダウンロード
 
-https://github.com/nTAKAn/detectron2_Machikado/releases/download/v1.0/machikado60_vott-json-export.zip
-
-ダウンロードし zipを展開後、vott-json-export ディレクトリの中身を detectron2_Machikado/vott-json-export ディレクトリにコピーしてください。
+* release から v1.x.x_vott-json-export.zip (v1.x.xは色々変わるので新しいのを選んでください)
+* zip を展開後 detectron2_Machikado/vott-json-export ディレクトリにコピーしてください。
 
 > データセットは Git リリースでアップしています。
 
