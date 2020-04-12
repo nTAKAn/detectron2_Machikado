@@ -37,7 +37,7 @@ AI学習モチベーション維持のために、まちカドまぞくが好き
 
 > Build Detectron2 from Source
 > 
-> ```python
+> ```
 > # Or, to install it from a local clone:
 > git clone https://github.com/facebookresearch/detectron2.git
 > cd detectron2 && python -m pip install -e .
@@ -62,11 +62,13 @@ https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md から�
 
 ですが、ファイル名が確実に違うので・・・例えば、ダウンロードされたファイル名が model_final_xxxxxx.pkl だとしたら、ノート中盤の・・・
 
-```
+```python
 cfg.MODEL.WEIGHTS = './coco_models/model_final_2d9806.pkl'
 ```
+
 の部分を・・・
-```
+
+```python
 cfg.MODEL.WEIGHTS = './coco_models/model_final_xxxxxx.pkl'
 ```
 
