@@ -1,0 +1,4 @@
+*.pth
+events.*
+metrics.json
+last_checkpoint
