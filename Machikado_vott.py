@@ -69,7 +69,7 @@ def get_machikado_dicts(export_filename, image_dirname, cat_name2id):
             bbox = region['boundingBox']
 
             obj = {
-                'bbox': [bbox['left'], bbox['top'], bbox['left'] + bbox['width'], bbox['top'] + bbox['height']],
+                'bbox': [bbox['left'], bbox['top'], bbox['width'], bbox['height']],
                 'bbox_mode': BoxMode.XYWH_ABS, # XYWH_REL はまだサポートされていないらしい
                 'segmentation': [poly],
                 'category_id': cat_name2id[region['tags'][0]],
