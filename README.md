@@ -52,11 +52,11 @@ detectron2 を git clone して出来た detectron2 ディレクトリの直下�
 
 https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md から、以下のファイルをダウンロードしてください。
 
-画面の中段くらいの、「COCO Object Detection Baselines」ってとこの「X101-FPN」の欄の「model」ってとこです。
+画面の中段くらいの、「COCO Object Detection Baselines」ってとこの「COCO Instance Segmentation Baselines with Mask R-CNN」の「X101-FPN」の欄の「model」ってとこです。
 
 ちなみに、画像で言うとこれです。
  
-<img src=https://user-images.githubusercontent.com/33882378/79042089-c2b26600-7c2f-11ea-9630-69cef399b497.jpg>
+<img src=https://user-images.githubusercontent.com/33882378/79058377-3a23dc00-7ca8-11ea-9622-a8e4c8ea53f8.jpg>
 
 ### (4) ダウンロードしたファイルを Machikado/coco_models にコピーしてください。
 
