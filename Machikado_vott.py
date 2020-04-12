@@ -41,7 +41,8 @@ def get_machikado_dicts(export_filename, image_dirname, cat_name2id):
             
         # 画像サイズを取得し確認する
         # （VoTT でアノテーション中画像を差し替えると画像のサイズが古い画像のままになるので修正する）
-        im = Image.open(image_dirname + asset['name'])
+        file_name = os.path.join(image_dirname, asset['name'])
+        im = Image.open(file_name)
         w, h = im.size
         
         if asset['size']['height'] != h or asset['size']['width'] != w:
@@ -49,7 +50,7 @@ def get_machikado_dicts(export_filename, image_dirname, cat_name2id):
                 asset['name'], asset['size']['width'], asset['size']['height'], export_filename, w, h))
         
         record = {}
-        record['file_name'] = image_dirname + asset['name']
+        record['file_name'] = file_name
         record['height'] = h
         record['width'] = w
 
