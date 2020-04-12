@@ -56,7 +56,7 @@ https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md から�
  
 <img src=https://user-images.githubusercontent.com/33882378/79058377-3a23dc00-7ca8-11ea-9622-a8e4c8ea53f8.jpg>
 
-### (4) ダウンロードしたファイルを Machikado/coco_models にコピーしてください。
+### (4) ダウンロードしたファイルを coco_models ディレクトリにコピーしてください。
 
 ですが、ファイル名が確実に違うので・・・例えば、ダウンロードされたファイル名が model_final_xxxxxx.pkl だとしたら、ノート中盤の・・・
 
@@ -71,6 +71,14 @@ cfg.MODEL.WEIGHTS = './coco_models/model_final_xxxxxx.pkl'
 ```
 
 へ書き換えて貰えばOKです。
+
+### (5) machikado データセットをダウンロード
+
+https://github.com/nTAKAn/detectron2_Machikado/releases/download/v1.0/machikado60_vott-json-export.zip
+
+ダウンロードし、zipを展開後 vott-json-export ディレクトリの中身を detectron2_Machikado/vott-json-export ディレクトリにコピーしてください。
+
+> データセットは Git リリースでアップしています。
 
 ## 2. 学習
 
