@@ -37,7 +37,7 @@ AI学習モチベーション維持のために、まちカドまぞくが好き
 
 > Build Detectron2 from Source
 > 
-> ```
+> ```python
 > # Or, to install it from a local clone:
 > git clone https://github.com/facebookresearch/detectron2.git
 > cd detectron2 && python -m pip install -e .
@@ -76,6 +76,21 @@ cfg.MODEL.WEIGHTS = './coco_models/model_final_xxxxxx.pkl'
 
 Machikado_training.ipynb を実行すればOK！
 
+> VoTT でアノテーションした違うデータセットを使いたい場合は、VoTT でエクスポートした vott-json-export をそのまま上書きしてしまえば良いです。
+> ただし、Machikado_evaluate.ipynb の変更が必要です(推論時は日本語名を使ってますので・・・)。
+
 ## 3. 推論
 
 Machikado_evaluate.ipynb を実行すればOK！
+
+> 違うデータセットの場合は、以下の部分の「VoTT のカテゴリはこっち」を使ってください。
+> 
+> ```python
+> # 日本語名はこっち
+> MetadataCatalog.get('train').set(thing_classes=CAT_NAME_JP)
+> MetadataCatalog.get('test').set(thing_classes=CAT_NAME_JP)
+> 
+> # VoTT のカテゴリ名はこっち
+> #MetadataCatalog.get('train').set(thing_classes=list(CAT_NAME2ID..> keys()))
+> #MetadataCatalog.get('test').set(thing_classes=list(CAT_NAME2ID.keys()))
+> ```

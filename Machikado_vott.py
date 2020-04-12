@@ -17,11 +17,8 @@ def get_cat_names(export_filename):
     for i, node in enumerate(json_data['tags']):
         cat_name2id[node['name']] = i
         cat_id2name[i] = node['name']
-
-    # 日本語表示を試す(cat_id2name と順番を一致させること！)
-    cat_name_jp = ['シャミ子', 'ごせん像', 'リリス', 'もも', 'みかん', 'その他']
     
-    return cat_name2id, cat_id2name, cat_name_jp
+    return cat_name2id, cat_id2name
 
 
 # #############################################################################
