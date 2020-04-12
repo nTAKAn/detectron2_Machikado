@@ -2,6 +2,7 @@ import os
 import json
 import random
 from collections import OrderedDict
+from PIL import Image
 
 from detectron2.structures import BoxMode
 
@@ -37,11 +38,20 @@ def get_machikado_dicts(export_filename, image_dirname, cat_name2id):
         if len(regions) == 0:
             print('警告: name: {} - 領域データが空だったのでスキップ'.format(asset['name']))
             continue
-
+            
+        # 画像サイズを取得し確認する
+        # （VoTT でアノテーション中画像を差し替えると画像のサイズが古い画像のままになるので修正する）
+        im = Image.open(image_dirname + asset['name'])
+        w, h = im.size
+        
+        if asset['size']['height'] != h or asset['size']['width'] != w:
+            print('警告: name: {} - 画像サイズの不整合 image_size:({}, {}), {}: ({}, {})'.format(
+                asset['name'], asset['size']['width'], asset['size']['height'], export_filename, w, h))
+        
         record = {}
         record['file_name'] = image_dirname + asset['name']
-        record['height'] = asset['size']['height']
-        record['width'] = asset['size']['width']
+        record['height'] = h
+        record['width'] = w
 
         objs = []
         for region in regions:
