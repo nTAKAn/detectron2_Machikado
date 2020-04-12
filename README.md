@@ -1,5 +1,22 @@
 # detectron2 for まちカドまぞく
 
+## 2020.04.13 重大なバグを修正しています。
+
+bbox の指定方法が間違っていました。画像端に行くほどbbox の座標がズレていく・・・
+
+ここですね
+```python
+def get_machikado_dicts():
+    
+    ・・・
+    
+            obj = {
+                'bbox': [bbox['left'], bbox['top'], [bbox['left'] + bbox['width'], bbox['top'] + bbox['height']],
+                'bbox_mode': BoxMode.XYWH_ABS, # XYWH_REL はまだサポートされていないらしい
+```
+
+BoxMode.XYWH_ABS って書いてあるじゃん・・・
+
 ## ＜現在テスト継続中です＞
 
 データセットのアノテーションが中途半端なんで仮の状態です！
@@ -98,6 +115,6 @@ Machikado_evaluate.ipynb を実行すればOK！
 > MetadataCatalog.get('test').set(thing_classes=CAT_NAME_JP)
 > 
 > # VoTT のカテゴリ名はこっち
-> #MetadataCatalog.get('train').set(thing_classes=list(CAT_NAME2ID..> keys()))
+> #MetadataCatalog.get('train').set(thing_classes=list(CAT_NAME2ID.keys()))
 > #MetadataCatalog.get('test').set(thing_classes=list(CAT_NAME2ID.keys()))
 > ```
