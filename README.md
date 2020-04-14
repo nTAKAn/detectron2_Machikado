@@ -1,32 +1,8 @@
 # detectron2 for まちカドまぞく
-
-## 2020.04.13 重大なバグを修正しています。
-
-bbox の指定方法が間違っていました。画像端に行くほどbbox の座標がズレていく・・・
-
-ここですね
-```python
-def get_machikado_dicts():
-    
-    ・・・
-    
-            obj = {
-                'bbox': [bbox['left'], bbox['top'], [bbox['left'] + bbox['width'], bbox['top'] + bbox['height']],
-                'bbox_mode': BoxMode.XYWH_ABS, # XYWH_REL はまだサポートされていないらしい
-```
-
-BoxMode.XYWH_ABS って書いてあるじゃん・・・
-
-## ＜現在テスト継続中です＞
-
-データセットのアノテーションが中途半端なんで仮の状態です！
-ですが、30枚程度の訓練画像にしてはテスト結果が良いですね。
-後50枚程度アノテーションが残っていますので、もう少し結果は良くなりそうです・・・生暖かく見守ってください。
-
 ---
 
-（この画像は訓練データの推論結果ですが、最終的にはこんな感じにしたい）
-<img src=https://user-images.githubusercontent.com/33882378/79041969-d4473e00-7c2e-11ea-9072-b24d55bb4762.jpg>
+上手くいくとこんな感じでインスタンスセグメンテーションされます。
+<img src=https://user-images.githubusercontent.com/33882378/79189949-02f72b80-7e5e-11ea-81e4-cdc58a3d33c9.jpg>
 
 AI学習モチベーション維持のために、まちカドまぞくが好きすぎるので detectron2 用のデータセットを　VoTT で作って試してみました。
 
