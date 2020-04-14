@@ -76,14 +76,14 @@ cfg.MODEL.WEIGHTS = './coco_models/model_final_xxxxxx.pkl'
 
 ## 2. 学習
 
-Machikado_training.ipynb を実行すればOK！
+[Machikado_training.ipynb](https://github.com/nTAKAn/detectron2_Machikado/blob/master/Machikado_training.ipynb) を実行すればOK！
 
 > VoTT でアノテーションした違うデータセットを使いたい場合は、VoTT でエクスポートした vott-json-export をそのまま上書きしてしまえば良いです。
 > ただし、Machikado_evaluate.ipynb の変更が必要です(推論時は日本語名を使ってますので・・・)。
 
 ## 3. 推論
 
-Machikado_predict.ipynb を実行すればOK！
+[Machikado_predict.ipynb](https://github.com/nTAKAn/detectron2_Machikado/blob/master/Machikado_predict.ipynb)
 
 > 違うデータセットの場合は、以下の部分の「VoTT のカテゴリはこっち」を使ってください。
 > 
