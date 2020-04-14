@@ -83,7 +83,7 @@ Machikado_training.ipynb を実行すればOK！
 
 ## 3. 推論
 
-Machikado_evaluate.ipynb を実行すればOK！
+Machikado_predict.ipynb を実行すればOK！
 
 > 違うデータセットの場合は、以下の部分の「VoTT のカテゴリはこっち」を使ってください。
 > 
