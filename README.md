@@ -101,4 +101,4 @@ cfg.MODEL.WEIGHTS = './coco_models/model_final_xxxxxx.pkl'
 
 AP, mAP を計算してみます。
 
-[Machikado_evalute.ipynb](https://github.com/nTAKAn/detectron2_Machikado/blob/master/Machikado_evaluate.ipynb)
+[Machikado_evaluate.ipynb](https://github.com/nTAKAn/detectron2_Machikado/blob/master/Machikado_evaluate.ipynb)
