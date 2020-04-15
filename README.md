@@ -96,3 +96,9 @@ cfg.MODEL.WEIGHTS = './coco_models/model_final_xxxxxx.pkl'
 > #MetadataCatalog.get('train').set(thing_classes=list(CAT_NAME2ID.keys()))
 > #MetadataCatalog.get('test').set(thing_classes=list(CAT_NAME2ID.keys()))
 > ```
+
+## 4. 評価
+
+AP, mAP を計算してみます。
+
+[Machikado_evalute.ipynb](https://github.com/nTAKAn/detectron2_Machikado/blob/master/Machikado_evalute.ipynb)
