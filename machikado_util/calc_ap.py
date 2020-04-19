@@ -236,19 +236,22 @@ def make_info_dict(true_dicts, pred_dicts, classes, th, debug=True):
 
     return df_dict
 
+
 def calc_AP(df_dict, cat_names):
     """
     AP を計算する
     """
-    AP = []
-
+    columns=['AP', 'iou']
+    tmp_dict = {key: [] for key in columns}
+    
     for _cls in df_dict.keys():
         df = df_dict[_cls]
         rec, pre = df['rec'].values, df['pre'].values
 
         # 1つしかない場合は 0
-        if len(rec) == 1:
-            AP.append(0)
+        if len(rec) < 2:
+            tmp_dict['AP'].append(0)
+            tmp_dict['iou'].append(0)
             continue
 
         # 台形として面積を求めます
@@ -259,8 +262,7 @@ def calc_AP(df_dict, cat_names):
 
             S += (p1 + p2) * h / 2
 
-        AP.append(S)
-        
-    df = pd.DataFrame(AP + [np.mean(AP)], columns=['AP'], index=(cat_names + ['mAP']))
-        
-    return df
+        tmp_dict['AP'].append(S)
+        tmp_dict['iou'].append(df['iou'].mean())
+    
+    return pd.DataFrame(tmp_dict, columns=columns, index=(cat_names))
